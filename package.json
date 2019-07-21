@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Some react components just to learn stuff",
   "scripts": {
-    "lint:js": "eslint src/**/*.js --fix",
-    "lint:sass": "sass-lint -c .sass-lint.yml 'src/components/**/*.scss' -v",
+    "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
+    "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
     "storybook": "start-storybook"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:js",
+      "pre-commit": "npm run lint:js && npm run lint:sass",
       "pre-push": ""
     }
   },

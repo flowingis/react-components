@@ -21,6 +21,10 @@ const ExampleIconColor = props => <div style={{ textAlign: 'center' }}>
   <code>{(props.paletteColor === 'inherit' ? props.paletteColor + ' (default)' : props.paletteColor)}</code>
 </div>
 
+ExampleIconColor.propTypes = {
+  paletteColor: PropTypes.string,
+}
+
 ExampleIcon.propTypes = {
   name: PropTypes.string.isRequired,
 }
