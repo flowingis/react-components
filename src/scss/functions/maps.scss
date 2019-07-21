@@ -1,0 +1,10 @@
+@function get($map, $key: 'default') {
+  // es:
+  // background-color: get($backgrounds, 'alto');
+
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+  @error 'No attribute key \'#{$key}\' found inside map #{$map}\n'
+  + 'Please checkout your code to fine where is the problem.';
+}

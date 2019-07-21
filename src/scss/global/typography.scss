@@ -1,0 +1,5 @@
+.text-sans {
+  font-family: get($font-family, 'sans');
+}
+
+@include add-styles-set($font-sans-styles, 'text-sans');

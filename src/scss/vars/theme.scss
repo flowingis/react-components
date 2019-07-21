@@ -1,0 +1,90 @@
+$spacing: 20px;
+
+$brand: (
+  'primary': #053852,
+  'secondary': #007aff,
+);
+
+$grey-scale: (
+  'black': rgb(0, 0, 0),
+  'abbey': rgb(77, 77, 77),
+  'boulder': rgb(121, 121, 121),
+  'star-dust': rgb(153, 154, 156),
+  'silver': rgb(187, 189, 191),
+  'mercury': rgb(230, 230, 230),
+  'haze': rgb(246, 246, 246),
+  'white': rgb(255, 255, 255),
+);
+
+$status: (
+  'neutral': rgb(77, 77, 77),
+  'info': rgb(0, 181, 184),
+  'success': rgb(133, 195, 61),
+  'warning': rgb(230, 169, 53),
+  'error': rgb(230, 32, 68),
+  'disabled': rgb(187, 189, 191),
+);
+
+$radius: (
+  'small': 3px,
+  'normal': 6px,
+  'large': 8px,
+);
+
+$tween: (
+  'hover': 0.5s get($ease, 'out-quart'),
+  'move': 0.325s get($ease, 'out-expo'),
+  'slow': 0.5s get($ease, 'out-expo'),
+);
+
+$font-family-name: (
+  'sans': 'Titillium Web',
+);
+
+$font-family: (
+  'sans': #{'#{get($font-family-name, "sans")}, Helvetica, Arial, sans-serif'},
+);
+
+$font-sans-styles: (
+  'body': (
+    'default': ('font-size': 16px, 'line-height': 24px, 'font-weight': 300),
+    'mobile': ('font-size': 14px, 'line-height': 24px, 'font-weight': 300),
+  ),
+  'action': (
+    'default': ('font-weight': 400),
+  ),
+  'title': (
+    'default': ('font-weight': 500),
+  ),
+  'label': (
+    'default': ('font-size': 13px, 'text-transform': uppercase, 'line-height': 13px, 'font-weight': 400),
+    'mobile': ('font-size': 12px, 'text-transform': uppercase, 'line-height': 12px, 'font-weight': 400),
+  ),
+  'input': (
+    'default': ('font-size': 14px, 'line-height': 14px, 'font-weight': 400),
+  ),
+  'small': (
+    'default': ('font-size': 10px, 'text-transform': uppercase, 'line-height': 14px, 'font-weight': 400),
+  ),
+  'note': (
+    'default': ('font-size': 10px, 'line-height': 12px, 'font-weight': 500),
+  ),
+);
+
+$media: (
+  'large': '(min-width: 1600px)',
+  'desktop': '(min-width: 1024px)',
+  'tablet': '(min-width: 768px)',
+  'mobile': '(max-width: 767px)',
+);
+
+$shadow: (
+  'bottom': 0 2px 0 rgba(0, 0, 0, 0.1),
+  'normal': 0 s(1) s(4) rgba(0, 0, 0, 0.1),
+  'strong': 0 s(1) s(4) rgba(0, 0, 0, 0.2),
+  'top': 0 -2px 0 rgba(0, 0, 0, 0.1),
+);
+
+$form: (
+  'height': 40px,
+);
