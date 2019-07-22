@@ -5,7 +5,7 @@
   "scripts": {
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
-    "build-storybook": "build-storybook -c .storybook -o dist",
+    "build": "build-storybook -c .storybook -o dist",
     "storybook": "start-storybook"
   },
   "husky": {
