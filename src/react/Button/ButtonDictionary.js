@@ -1,8 +1,8 @@
 export default {
-  cancel: 'ui-button--cancel',
-  confirm: 'ui-button--confirm',
-  danger: 'ui-button--danger',
+  cancel: 'button--cancel',
+  confirm: 'button--confirm',
+  danger: 'button--danger',
   default: '',
-  option: 'ui-button--option',
-  warning: 'ui-button--warning',
+  option: 'button--option',
+  warning: 'button--warning',
 }

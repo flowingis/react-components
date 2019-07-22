@@ -7,7 +7,7 @@ import InputSerial from '../Input/InputSerial'
 
 const FilterConnection = props =>
   <Filter {...props}>
-    <InputSerial className="ui-filter__item"/>
+    <InputSerial className="filter__item"/>
   </Filter>
 
 FilterConnection.propTypes = {
