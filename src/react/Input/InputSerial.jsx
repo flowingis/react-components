@@ -5,7 +5,7 @@ import Input from './Input'
 
 const InputSerial = props =>
   <Input {...props}>
-    <input name={props.name} autocomplete={props.autocomplete} onChange={e => props.onChange(e.target.value)} className="ui-input__field text-sans text-sans--input" type="text" defaultValue={props.value} placeholder={props.placeholder}/>
+    <input name={props.name} autocomplete={props.autocomplete} onChange={e => props.onChange(e.target.value)} className="input__field text-sans text-sans--input" type="text" defaultValue={props.value} placeholder={props.placeholder}/>
   </Input>
 
 InputSerial.propTypes = {

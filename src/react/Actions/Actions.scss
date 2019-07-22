@@ -2,7 +2,7 @@
 
 $footer-height: -54px;
 
-.ui-actions {
+.actions {
   background-color: get($grey-scale, 'boulder');
   bottom: 0;
   color: get($grey-scale, 'white');
@@ -26,7 +26,7 @@ $footer-height: -54px;
   }
 
   &--expanded {
-    .ui-actions {
+    .actions {
       &__list {
         margin-top: 0%;
         opacity: 1;

@@ -3,7 +3,7 @@
 $modal-size: 450px;
 $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
 
-.ui-modal-slider {
+.modal {
   align-items: center;
   bottom: 0;
   display: flex;
@@ -25,7 +25,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
     justify-content: flex-start;
     visibility: visible;
 
-    .ui-modal-slider {
+    .modal {
       &__close {
         left: auto;
         right: s(1);
@@ -62,7 +62,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
       }
     }
 
-    .ui-modal-slider {
+    .modal {
       &__window {
         @include media ('tablet') {
           height: auto;
@@ -94,7 +94,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
       opacity: 1;
     }
 
-    .ui-modal-slider {
+    .modal {
       &__window {
         box-shadow: get($shadow, 'strong');
         opacity: 1;
@@ -168,7 +168,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
         padding: s(1);
       }
 
-      &.ui-modal-slider__contents--clean {
+      &.modal__contents--clean {
         @include media ('tablet') {
           padding-right: 0;
         }

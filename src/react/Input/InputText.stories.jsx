@@ -4,7 +4,7 @@ import Page from '../Page/Page'
 
 import InputText from './InputText'
 
-storiesOf('Form/InputText', module)
+storiesOf('Form/Input/Text', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Basic usage', () =>
     <InputText label="This is a text field" placeholder="Placeholder"/>

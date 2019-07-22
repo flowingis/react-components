@@ -2,7 +2,7 @@
 
 $opacity: 0.25;
 
-.ui-radio {
+.radio {
 
   align-items: end;
   display: inline-flex;
@@ -13,7 +13,7 @@ $opacity: 0.25;
   }
 
   &:hover {
-    .ui-radio {
+    .radio {
       &__icon {
         color: get($brand, 'primary');
       }
@@ -23,20 +23,20 @@ $opacity: 0.25;
   &__field {
     display: none;
 
-    & + .ui-radio__icon {
+    & + .radio__icon {
       display: inline-block;
     }
 
-    & + .ui-radio__icon + .ui-radio__icon {
+    & + .radio__icon + .radio__icon {
       display: none;
     }
 
     &:checked {
-      & + .ui-radio__icon {
+      & + .radio__icon {
         display: none;
       }
 
-      & + .ui-radio__icon + .ui-radio__icon {
+      & + .radio__icon + .radio__icon {
         color: get($brand, 'primary');
         display: inline-flex;
       }
@@ -44,12 +44,12 @@ $opacity: 0.25;
   }
 
   &--custom {
-    .ui-radio__field {
-      & + .ui-radio__icon {
+    .radio__field {
+      & + .radio__icon {
         opacity: $opacity;
       }
 
-      & + .ui-radio__icon + .ui-radio__icon {
+      & + .radio__icon + .radio__icon {
         opacity: 1;
       }
     }

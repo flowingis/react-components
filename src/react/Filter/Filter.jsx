@@ -5,13 +5,13 @@ import './Filter.scss'
 import Checkbox from '../Checkbox/Checkbox'
 
 const Filter = props =>
-  <section className={`ui-filter ${props.className} ${props.isActive ? 'ui-filter--active' : ''}`.trim()}>
-    <header className="ui-filter__header">
+  <section className={`filter ${props.className} ${props.isActive ? 'filter--active' : ''}`.trim()}>
+    <header className="filter__header">
       <Checkbox sync={true} isChecked={props.isActive} onChange={isChecked => { props.onActivation(isChecked) }}>
         <div className="text-sans text-sans--title">{props.title}</div>
       </Checkbox>
     </header>
-    <div className="ui-filter__list">
+    <div className="filter__list">
       {props.children}
     </div>
   </section>

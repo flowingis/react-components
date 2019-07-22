@@ -4,15 +4,15 @@ import './Input.scss'
 import Icon from '../Icon/Icon'
 
 const Input = props =>
-  <label className={`ui-input ${props.className} ${props.icon ? 'ui-input--has-icon' : ''}`.trim()}>
+  <label className={`input ${props.className} ${props.icon ? 'input--has-icon' : ''}`.trim()}>
     {props.label &&
-      <div className="ui-input__label text-sans text-sans--label">
+      <div className="input__label text-sans text-sans--label">
         {props.label}
       </div>
     }
     {props.icon &&
-      <div className="ui-input__icon-area">
-        <Icon className="ui-input__icon" name={props.icon}/>
+      <div className="input__icon-area">
+        <Icon className="input__icon" name={props.icon}/>
       </div>
     }
     {props.children}

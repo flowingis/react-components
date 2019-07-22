@@ -6,11 +6,11 @@ import action from './ButtonDictionary'
 
 const Button = props =>
   <button
-    className={`ui-button ${props.className} ${(props.size ? 'ui-button--' + props.size : '')} ${action[props.action]} ${props.disabled ? 'ui-button--disabled' : ''} ${props.collapse ? 'ui-button--collapse' : ''}`.trim()}
+    className={`button ${props.className} ${(props.size ? 'button--' + props.size : '')} ${action[props.action]} ${props.disabled ? 'button--disabled' : ''} ${props.collapse ? 'button--collapse' : ''}`.trim()}
     onClick={() => props.onClick()}
     disabled={props.disabled ? 'disabled' : ''}>
-    {props.icon && <Icon className='ui-button__icon' name={props.icon}/>}
-    <div className='ui-button__text'>{props.children}</div>
+    {props.icon && <Icon className='button__icon' name={props.icon}/>}
+    <div className='button__text'>{props.children}</div>
   </button>
 
 Button.propTypes = {

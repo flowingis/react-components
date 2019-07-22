@@ -4,7 +4,7 @@ import Page from '../Page/Page'
 
 import InputSerial from './InputSerial'
 
-storiesOf('Form/InputSerial', module)
+storiesOf('Form/Input/Serial', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () =>
     <InputSerial />

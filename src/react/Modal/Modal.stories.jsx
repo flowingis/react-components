@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
-import ModalSlider from './ModalSlider'
+import Modal from './Modal'
 import Button from '../Button/Button'
 
 const description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
@@ -14,9 +14,9 @@ const ContextSlider = props => {
       <Button onClick={() => { toggleModal(true) }} icon="test">
         Open modal
       </Button>
-      <ModalSlider show={show} onClose={() => { toggleModal(false) }}>
+      <Modal show={show} onClose={() => { toggleModal(false) }}>
         {description}<br/><br/>{description}<br/><br/>{description}
-      </ModalSlider>
+      </Modal>
     </Fragment>
   )
 }
@@ -28,9 +28,9 @@ const ContextSliderDesktop = props => {
       <Button onClick={() => { toggleModal(true) }} icon="test">
         Open modal
       </Button>
-      <ModalSlider desktopMode={true} show={show} onClose={() => { toggleModal(false) }}>
+      <Modal desktopMode={true} show={show} onClose={() => { toggleModal(false) }}>
         {description}<br/><br/>{description}<br/><br/>{description}
-      </ModalSlider>
+      </Modal>
     </Fragment>
   )
 }
@@ -42,39 +42,39 @@ const ContextSliderFull = props => {
       <Button onClick={() => { toggleModal(true) }} icon="test">
         Open modal
       </Button>
-      <ModalSlider title="Are you sure?" desktopMode={true} show={show} onConfirm={() => { toggleModal(false) }} onClose={() => { toggleModal(false) }}>
+      <Modal title="Are you sure?" desktopMode={true} show={show} onConfirm={() => { toggleModal(false) }} onClose={() => { toggleModal(false) }}>
         {description}<br/><br/>{description}<br/><br/>{description}
-      </ModalSlider>
+      </Modal>
     </Fragment>
   )
 }
 
-storiesOf('Modal/ModalSlider', module)
+storiesOf('Modal', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () =>
-    <ModalSlider show={true}>
+    <Modal show={true}>
       {description}<br/><br/>{description}<br/><br/>{description}
-    </ModalSlider>
+    </Modal>
   )
   .add('Clean', () =>
-    <ModalSlider show={true} contentOnly={true}>
+    <Modal show={true} contentOnly={true}>
       {description}<br/><br/>{description}<br/><br/>{description}
-    </ModalSlider>
+    </Modal>
   )
   .add('Title', () =>
-    <ModalSlider show={true} title="Confirm this stuff or go away">
+    <Modal show={true} title="Confirm this stuff or go away">
       {description}<br/><br/>{description}<br/><br/>{description}
-    </ModalSlider>
+    </Modal>
   )
   .add('Title and clean', () =>
-    <ModalSlider show={true} contentOnly={true} title="Confirm this stuff or go away">
+    <Modal show={true} contentOnly={true} title="Confirm this stuff or go away">
       {description}<br/><br/>{description}<br/><br/>{description}
-    </ModalSlider>
+    </Modal>
   )
   .add('Footer', () =>
-    <ModalSlider show={true} onConfirm={() => {}}>
+    <Modal show={true} onConfirm={() => {}}>
       {description}<br/><br/>{description}<br/><br/>{description}
-    </ModalSlider>
+    </Modal>
   )
   .add('Desktop mode', () =>
     <ContextSliderDesktop/>

@@ -7,18 +7,18 @@ const Actions = props => {
   const [expanded, toggleCheckbox] = useState(true)
 
   return (
-    <div className={`ui-actions ${props.className} ${props.show ? 'ui-actions--active' : ''} ${expanded ? 'ui-actions--expanded' : ''}`.trim()}>
-      <header className="ui-actions__header">
-        <div className="ui-actions__title">
+    <div className={`actions ${props.className} ${props.show ? 'actions--active' : ''} ${expanded ? 'actions--expanded' : ''}`.trim()}>
+      <header className="actions__header">
+        <div className="actions__title">
           {props.title}
         </div>
-        <Switch className="ui-actions__switch" onChange={toggleCheckbox} isChecked={expanded}>
+        <Switch className="actions__switch" onChange={toggleCheckbox} isChecked={expanded}>
           {props.label}
         </Switch>
       </header>
       {props.children &&
-        <div className="ui-actions__container">
-          <div className="ui-actions__list">
+        <div className="actions__container">
+          <div className="actions__list">
             {props.children}
           </div>
         </div>

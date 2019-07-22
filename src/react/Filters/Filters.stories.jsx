@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
-import ModalSlider from '../ModalSlider/ModalSlider'
+import Modal from '../Modal/Modal'
 import Checkbox from '../Checkbox/Checkbox'
 import FilterInstallation from '../Filter/FilterInstallation'
 import FilterConnection from '../Filter/FilterConnection'
@@ -28,13 +28,13 @@ const ContextFilters = props => {
         <Checkbox sync={true} isChecked={isSerialActive} onChange={isChecked => { activateSerial(isChecked); showModal(isChecked) }}>Seriale</Checkbox>
         <Checkbox sync={true} isChecked={isTagActive} onChange={isChecked => { activateTag(isChecked); showModal(isChecked) }}>Tag</Checkbox>
       </Filters>
-      <ModalSlider title="Handle filters" contentOnly={true} show={show} onClose={() => { showModal(false) }}>
+      <Modal title="Handle filters" contentOnly={true} show={show} onClose={() => { showModal(false) }}>
         <FilterInstallation isActive={isInstallationActive} onActivation={isActive => { activateInstallation(isActive) }}/>
         <FilterConnection isActive={isConnectionActive} onActivation={isActive => { activateConnection(isActive) }}/>
         <FilterModel isActive={isModelActive} onActivation={isActive => { activateModel(isActive) }}/>
         <FilterSerial isActive={isSerialActive} onActivation={isActive => { activateSerial(isActive) }}/>
         <FilterTag isActive={isTagActive} onActivation={isActive => { activateTag(isActive) }}/>
-      </ModalSlider>
+      </Modal>
     </Fragment>
   )
 }

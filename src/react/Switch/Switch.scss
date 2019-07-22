@@ -6,18 +6,18 @@ $padding-size: s(0.25);
 $dot: (
   'checked': get($grey-scale, 'white'),
   'hover': get($grey-scale, 'white'),
-  'radius': 4px,
+  'radius': 100px,
   'unchecked': get($grey-scale, 'haze'),
 );
 
 $box: (
   'checked': get($brand, 'primary'),
   'hover': get($grey-scale, 'star-dust'),
-  'radius': 8px,
+  'radius': 100px,
   'unchecked': get($grey-scale, 'star-dust'),
 );
 
-.ui-switch {
+.switch {
 
   align-items: center;
   display: inline-flex;
@@ -26,11 +26,11 @@ $box: (
     display: none;
 
     &:checked {
-      & + .ui-switch__box {
+      & + .switch__box {
         background-color: get($box, 'checked');
 
         // sass-lint:disable nesting-depth
-        .ui-switch__dot {
+        .switch__dot {
           background-color: get($dot, 'checked');
           transform: translate(100%, 0);
         }
@@ -51,7 +51,7 @@ $box: (
     &:hover {
       background-color: get($box, 'hover');
 
-      .ui-switch {
+      .switch {
         &__dot {
           background-color: get($dot, 'hover');
         }
