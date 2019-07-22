@@ -6,7 +6,7 @@
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
     "build": "build-storybook -c .storybook -o dist",
-    "deploy": "git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages",
+    "deploy": "npm run build && git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages",
     "storybook": "start-storybook"
   },
   "husky": {
