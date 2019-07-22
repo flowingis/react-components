@@ -1,0 +1,69 @@
+@import '../../scss/import-global';
+
+$opacity: 0.25;
+
+.ui-radio {
+
+  align-items: end;
+  display: inline-flex;
+  margin-right: s(1);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    .ui-radio {
+      &__icon {
+        color: get($brand, 'primary');
+      }
+    }
+  }
+
+  &__field {
+    display: none;
+
+    & + .ui-radio__icon {
+      display: inline-block;
+    }
+
+    & + .ui-radio__icon + .ui-radio__icon {
+      display: none;
+    }
+
+    &:checked {
+      & + .ui-radio__icon {
+        display: none;
+      }
+
+      & + .ui-radio__icon + .ui-radio__icon {
+        color: get($brand, 'primary');
+        display: inline-flex;
+      }
+    }
+  }
+
+  &--custom {
+    .ui-radio__field {
+      & + .ui-radio__icon {
+        opacity: $opacity;
+      }
+
+      & + .ui-radio__icon + .ui-radio__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    cursor: pointer;
+  }
+
+  &__icon {
+    color: get($brand, 'primary');
+    cursor: pointer;
+    margin-right: s(0.25);
+    transition: color get($tween, 'hover');
+    user-select: none;
+  }
+}

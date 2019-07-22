@@ -1,0 +1,16 @@
+@import '../../scss/import-global';
+
+.ui-filters {
+  background-color: get($grey-scale, 'haze');
+  padding: s(1);
+  position: sticky;
+
+  &__title {
+    margin-bottom: s(0.5);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../scss/import-global';
+
+$opacity: 0.25;
+
+.checkbox {
+
+  align-items: end;
+  display: inline-flex;
+  margin-right: s(1);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    .checkbox {
+      &__icon {
+        color: get($brand, 'primary');
+      }
+    }
+  }
+
+  &__field {
+    display: none;
+
+    & + .checkbox__icon {
+      display: inline-block;
+    }
+
+    & + .checkbox__icon + .checkbox__icon {
+      display: none;
+    }
+
+    &:checked {
+      & + .checkbox__icon {
+        display: none;
+      }
+
+      & + .checkbox__icon + .checkbox__icon {
+        color: get($brand, 'primary');
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__text {
+    cursor: pointer;
+  }
+
+  &--custom {
+    .checkbox__field {
+      & + .checkbox__icon {
+        opacity: $opacity;
+      }
+
+      & + .checkbox__icon + .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icon {
+    color: get($brand, 'primary');
+    cursor: pointer;
+    margin-right: s(0.25);
+    transition: color get($tween, 'hover');
+    user-select: none;
+  }
+}

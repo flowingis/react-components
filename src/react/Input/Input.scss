@@ -1,0 +1,58 @@
+@import '../../scss/import-global';
+
+$outline: 0 0 0 4px rgba(get($brand, 'primary'), 0.075);
+$size: get($form, 'height');
+
+.ui-input {
+  position: relative;
+
+  &--has-icon {
+    .ui-input {
+      &__field {
+        padding-right: $size;
+      }
+    }
+  }
+
+  &__label {
+    color: get($grey-scale, 'boulder');
+    margin-bottom: s(0.5);
+  }
+
+  &__field {
+    border: 1px solid get($grey-scale, 'silver');
+    border-radius: get($radius, 'small');
+    box-shadow: none;
+    color: get($grey-scale, 'abbey');
+    height: $size;
+    padding: 0 s(0.5);
+    transition: border-color get($tween, 'hover'), box-shadow get($tween, 'hover');
+    width: 100%;
+
+    &:focus {
+      border-color: get($brand, 'primary');
+      box-shadow: $outline;
+      outline: 0;
+
+      &::placeholder {
+        color: get($grey-scale, 'mercury');
+      }
+    }
+
+    &::placeholder {
+      color: get($grey-scale, 'silver');
+      transition: color get($tween, 'hover');
+    }
+  }
+
+  &__icon-area {
+    align-items: center;
+    display: flex;
+    height: $size;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: $size;
+    z-index: 1;
+  }
+}

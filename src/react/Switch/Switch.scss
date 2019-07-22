@@ -1,0 +1,83 @@
+@import '../../scss/import-global';
+
+$dot-size: s(1);
+$padding-size: s(0.25);
+
+$dot: (
+  'checked': get($grey-scale, 'white'),
+  'hover': get($grey-scale, 'white'),
+  'radius': 4px,
+  'unchecked': get($grey-scale, 'haze'),
+);
+
+$box: (
+  'checked': get($brand, 'primary'),
+  'hover': get($grey-scale, 'star-dust'),
+  'radius': 8px,
+  'unchecked': get($grey-scale, 'star-dust'),
+);
+
+.ui-switch {
+
+  align-items: center;
+  display: inline-flex;
+
+  &__field {
+    display: none;
+
+    &:checked {
+      & + .ui-switch__box {
+        background-color: get($box, 'checked');
+
+        // sass-lint:disable nesting-depth
+        .ui-switch__dot {
+          background-color: get($dot, 'checked');
+          transform: translate(100%, 0);
+        }
+      }
+    }
+  }
+
+  &__box {
+    background-color: get($box, 'unchecked');
+    border-radius: get($box, 'radius');
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 0;
+    padding: $padding-size;
+    transition: background-color get($tween, 'hover');
+    width: (($dot-size + $padding-size) * 2);
+
+    &:hover {
+      background-color: get($box, 'hover');
+
+      .ui-switch {
+        &__dot {
+          background-color: get($dot, 'hover');
+        }
+      }
+    }
+  }
+
+  &__dot {
+    background-color: get($dot, 'unchecked');
+    border-radius: get($dot, 'radius');
+    display: inline-block;
+    height: $dot-size;
+    line-height: 0;
+    transition: background-color get($tween, 'hover'), transform get($tween, 'move');
+    width: $dot-size;
+  }
+
+  &__text {
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: s(0.5);
+    }
+
+    &:last-child {
+      margin-left: s(0.5);
+    }
+  }
+}

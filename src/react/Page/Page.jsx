@@ -2,7 +2,7 @@ import React from 'react'
 import './Page.scss'
 
 const Page = props =>
-  <section>
+  <section class="page">
     {props.children}
   </section>
 
