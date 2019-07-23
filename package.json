@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Some react components just to learn stuff",
   "scripts": {
-    "build": "build-storybook -c .storybook -o dist",
     "deploy": "storybook-to-ghpages",
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
