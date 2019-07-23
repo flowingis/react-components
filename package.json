@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Some react components just to learn stuff",
   "scripts": {
+    "build": "build-storybook -c .storybook -o dist",
+    "deploy": "storybook-to-ghpages",
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
-    "build": "build-storybook -c .storybook -o dist",
-    "deploy": "npm run build && git add dist/ && git commit -m 'Update contents' && git subtree push --prefix dist origin gh-pages",
     "storybook": "start-storybook"
   },
   "husky": {
@@ -37,6 +37,7 @@
     "@storybook/addons": "^5.1.9",
     "@storybook/cli": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@symfony/webpack-encore": "^0.27.0",
     "autoprefixer": "^9.6.1",
     "babel-jest": "^24.8.0",
@@ -71,8 +72,9 @@
     "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.6",
     "react-gsap": "^1.2.0",
+    "react-hook-form": "^3.18.8",
     "react-router-dom": "^5.0.1",
     "react-timeago": "^4.4.0",
-    "typeface-titillium-web": "0.0.72"
+    "typeface-roboto": "0.0.75"
   }
 }

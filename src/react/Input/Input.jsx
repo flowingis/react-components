@@ -4,7 +4,7 @@ import './Input.scss'
 import Icon from '../Icon/Icon'
 
 const Input = props =>
-  <label className={`input ${props.className} ${props.icon ? 'input--has-icon' : ''}`.trim()}>
+  <label className={`input ${props.className} ${props.icon ? 'input--has-icon' : ''} ${Object.keys(props.errors).length > 0 ? 'input--has-errors' : ''}`.trim()}>
     {props.label &&
       <div className="input__label text-sans text-sans--label">
         {props.label}
@@ -16,10 +16,19 @@ const Input = props =>
       </div>
     }
     {props.children}
+    <ul className="input__errors">
+      {Object.keys(props.errors).map(name =>
+        <li className="input__error">
+          <Icon className="input__error-icon" name={props.errors[name].type}/>
+          {props.errors[name].message}
+        </li>
+      )}
+    </ul>
   </label>
 
 Input.propTypes = {
   className: PropTypes.string,
+  errors: PropTypes.obj,
   icon: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
@@ -30,6 +39,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
   className: '',
+  errors: {},
   icon: '',
   label: '',
   name: 'unassigned',

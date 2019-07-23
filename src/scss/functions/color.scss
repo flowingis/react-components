@@ -1,0 +1,6 @@
+@function hs($base-color, $hue-color) {
+  $h: hue($hue-color);
+  $s: saturation($hue-color);
+  $l: lightness($base-color);
+  @return hsl($h, $s, $l);
+}
