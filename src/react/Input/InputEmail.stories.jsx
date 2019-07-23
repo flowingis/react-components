@@ -6,7 +6,6 @@ import InputEmail from './InputEmail'
 
 const Form = () => {
   const [fieldValue, setValue] = useState(null)
-  const [fieldValid, setValidity] = useState(false)
   return (
     <Fragment>
       <InputEmail onValid={ value => { setValue(value.email) }} />
