@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import './Icon.scss'
-import material from './IconDictionary'
+
+import dictionary from './IconDictionary'
 import palette from './IconPalette'
 
 const Icon = props =>
   <Fragment>
-    {props.paletteColor && <i {...props} style={{ color: palette[props.paletteColor] }} title={material[props.name] ? '' : 'Warning: property "name" not set'} className={`material-icons icon ${(props.size ? 'icon--' + props.size : '')} ${props.className}`}>{(material[props.name] ? material[props.name] : material.missingIcon)}</i>}
-    {!props.paletteColor && <i {...props} title={material[props.name] ? '' : 'Warning: property "name" not set'} className={`material-icons icon ${(props.size ? 'icon--' + props.size : '')} ${props.className}`}>{(material[props.name] ? material[props.name] : material.missingIcon)}</i>}
+    {props.paletteColor && <i style={{ color: palette[props.paletteColor] }} title={dictionary[props.name] ? '' : 'Warning: property "name" not set'} className={`material-icons icon ${(props.size ? 'icon--' + props.size : '')} ${props.className}`}>{(dictionary[props.name] ? dictionary[props.name] : dictionary.missingIcon)}</i>}
+    {!props.paletteColor && <i title={dictionary[props.name] ? '' : 'Warning: property "name" not set'} className={`material-icons icon ${(props.size ? 'icon--' + props.size : '')} ${props.className}`}>{(dictionary[props.name] ? dictionary[props.name] : dictionary.missingIcon)}</i>}
   </Fragment>
 
 Icon.propTypes = {
@@ -22,6 +23,7 @@ Icon.defaultProps = {
   className: '',
   name: 'missingIcon',
   onClick: () => {},
+  paletteColor: '',
   size: '',
 }
 

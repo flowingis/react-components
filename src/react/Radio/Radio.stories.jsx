@@ -21,7 +21,7 @@ const DefaultRadios = props => {
   )
 }
 
-storiesOf('Form/Radio', module)
+storiesOf('UI/Form/Radio', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () =>
     <DefaultRadios/>

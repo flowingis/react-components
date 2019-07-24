@@ -4,7 +4,7 @@ import './Input.scss'
 import Icon from '../Icon/Icon'
 
 const Input = props =>
-  <label className={`input ${props.className} ${props.icon ? 'input--has-icon' : ''} ${Object.keys(props.errors).length > 0 ? 'input--has-errors' : ''}`.trim()}>
+  <label className={`input ${props.icon ? 'input--has-icon' : ''} ${Object.keys(props.errors).length > 0 ? 'input--has-errors' : ''}  ${props.className}`}>
     {props.label &&
       <div className="input__label text-sans text-sans--label">
         {props.label}
@@ -31,10 +31,6 @@ Input.propTypes = {
   errors: PropTypes.obj,
   icon: PropTypes.string,
   label: PropTypes.string,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
 }
 
 Input.defaultProps = {
@@ -42,10 +38,6 @@ Input.defaultProps = {
   errors: {},
   icon: '',
   label: '',
-  name: 'unassigned',
-  onChange: value => { return value },
-  placeholder: '',
-  value: '',
 }
 
 export default Input

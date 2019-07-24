@@ -4,11 +4,18 @@ import './Radio.scss'
 import Icon from '../Icon/Icon'
 
 const Radio = props =>
-  <label className={`radio ${props.className} ${props.icon ? 'radio--custom' : ''}`.trim()}>
-    <input name={props.name} onChange={e => props.onChange(e.target.value)} className="radio__field" defaultChecked={props.isChecked} type="radio" value={props.value}/>
-    <Icon {...props} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
-    <Icon {...props} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
-    <div className="radio__text">
+  <label className={`ui-radio ${props.className} ${props.icon ? 'ui-radio--custom' : ''}`.trim()}>
+    <input
+      className="ui-radio__field"
+      defaultChecked={props.isChecked}
+      name={props.name}
+      onChange={e => props.onChange(e.target.value)}
+      type="radio"
+      value={props.value}
+    />
+    <Icon paletteColor={props.paletteColor} className="ui-radio__icon" name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
+    <Icon paletteColor={props.paletteColor} className="ui-radio__icon" name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
+    <div className="ui-radio__text">
       {props.children}
     </div>
   </label>
@@ -19,7 +26,8 @@ Radio.propTypes = {
   isChecked: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
-  value: PropTypes.obj,
+  paletteColor: PropTypes.string,
+  value: PropTypes.string,
 }
 
 Radio.defaultProps = {
@@ -28,7 +36,8 @@ Radio.defaultProps = {
   isChecked: false,
   name: 'unassigned',
   onChange: value => { return value },
-  value: 0,
+  paletteColor: '',
+  value: '0',
 }
 
 export default Radio

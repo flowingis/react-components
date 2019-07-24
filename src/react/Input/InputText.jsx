@@ -1,14 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Input.scss'
 import Input from './Input'
 
 const InputText = props =>
-  <Input {...props}>
-    <input name={props.name} autoComplete={props.autoComplete} onChange={e => props.onChange(e.target.value)} className="input__field text-sans text-sans--input" type="text" defaultValue={props.value} placeholder={props.placeholder}/>
+  <Input icon={props.icon}>
+    <input
+      autoComplete={props.autoComplete}
+      className="ui-input__field text-sans text-sans--input"
+      defaultValue={props.value}
+      name={props.name}
+      onChange={e => props.onChange(e.target.value)}
+      placeholder={props.placeholder}
+      type="text"
+    />
   </Input>
 
 InputText.propTypes = {
   autoComplete: PropTypes.string,
+  icon: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
@@ -17,6 +27,7 @@ InputText.propTypes = {
 
 InputText.defaultProps = {
   autoComplete: 'off',
+  icon: '',
   name: 'unassigned',
   onChange: value => { return value },
   placeholder: '',

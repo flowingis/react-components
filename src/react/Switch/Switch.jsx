@@ -3,19 +3,19 @@ import PropTypes from 'prop-types'
 import './Switch.scss'
 
 const Switch = props =>
-  <label className={`switch ${props.className}`}>
+  <label className={`ui-switch ${props.className}`}>
     <input
-      className="switch__field"
-      type="checkbox"
-      name=""
-      value="1"
+      className="ui-switch__field"
       defaultChecked={props.isChecked}
+      name={props.name}
       onChange={e => props.onChange(e.target.checked)}
+      type="checkbox"
+      defaultValue={props.value}
     />
-    <div className="switch__box">
-      <div className="switch__dot"></div>
+    <div className="ui-switch__box">
+      <div className="ui-switch__dot"></div>
     </div>
-    <div className="switch__text">
+    <div className="ui-switch__text">
       {props.children}
     </div>
   </label>
@@ -23,13 +23,17 @@ const Switch = props =>
 Switch.propTypes = {
   className: PropTypes.string,
   isChecked: PropTypes.bool,
+  name: PropTypes.string,
   onChange: PropTypes.func,
+  value: PropTypes.string,
 }
 
 Switch.defaultProps = {
   className: '',
   isChecked: false,
-  onChange: () => {},
+  name: 'unassigned',
+  onChange: value => { return value },
+  value: '0',
 }
 
 export default Switch

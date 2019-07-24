@@ -1,16 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Input.scss'
 import Input from './Input'
 
 const InputSerial = props =>
-  <Input {...props}>
-    <input name={props.name} autoComplete={props.autoComplete} onChange={e => props.onChange(e.target.value)} className="input__field text-sans text-sans--input" type="text" defaultValue={props.value} placeholder={props.placeholder}/>
+  <Input icon={props.icon}>
+    <input
+      autoComplete={props.autoComplete}
+      className="ui-input__field text-sans text-sans--input"
+      defaultValue={props.value}
+      name={props.name}
+      onChange={e => props.onChange(e.target.value)}
+      placeholder={props.placeholder}
+      type="text"
+    />
   </Input>
 
 InputSerial.propTypes = {
   autoComplete: PropTypes.string,
-  name: PropTypes.string,
   icon: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   value: PropTypes.string,
@@ -18,8 +27,8 @@ InputSerial.propTypes = {
 
 InputSerial.defaultProps = {
   autoComplete: 'off',
-  name: 'serial',
   icon: 'serial',
+  name: 'unassigned',
   onChange: value => { return value },
   placeholder: '9203102390',
   value: '',

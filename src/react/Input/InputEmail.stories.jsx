@@ -1,16 +1,20 @@
-import React, { Fragment, useState } from 'react'
+import React from 'react'
+
 import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
 import InputEmail from './InputEmail'
+import Button from '../Button/Button'
 
 const Form = () => {
-  const [fieldValue, setValue] = useState(null)
+  const onSubmit = values => {
+    console.log(values)
+  }
   return (
-    <Fragment>
-      <InputEmail onValid={ value => { setValue(value.email) }} />
-      {fieldValue && <div>Field value: {fieldValue}</div>}
-    </Fragment>
+    <form onSubmit={onSubmit}>
+      <InputEmail name="pippo"/>
+      <Button>Submit</Button>
+    </form>
   )
 }
 
