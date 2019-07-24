@@ -14,7 +14,7 @@ const ContextSlider = props => {
       <Button onClick={() => { toggleModal(true) }} icon="test">
         Open modal
       </Button>
-      <Modal show={show} onClose={() => { toggleModal(false) }}>
+      <Modal show={show} onClose={() => { console.log('close??'); toggleModal(false) }}>
         {description}<br/><br/>{description}<br/><br/>{description}
       </Modal>
     </Fragment>

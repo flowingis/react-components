@@ -50,9 +50,9 @@ Modal.defaultProps = {
   className: '',
   contentOnly: false,
   desktopMode: false,
-  onClose: () => {},
+  onClose: null,
   onConfirm: null,
-  position: 'right',
+  position: 'right', // right || left
   show: true,
   title: '',
 }

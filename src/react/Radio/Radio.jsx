@@ -4,18 +4,18 @@ import './Radio.scss'
 import Icon from '../Icon/Icon'
 
 const Radio = props =>
-  <label className={`ui-radio ${props.className} ${props.icon ? 'ui-radio--custom' : ''}`.trim()}>
+  <label className={`radio ${props.className} ${props.icon ? 'radio--custom' : ''}`.trim()}>
     <input
-      className="ui-radio__field"
+      className="radio__field"
       defaultChecked={props.isChecked}
       name={props.name}
       onChange={e => props.onChange(e.target.value)}
       type="radio"
       value={props.value}
     />
-    <Icon paletteColor={props.paletteColor} className="ui-radio__icon" name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
-    <Icon paletteColor={props.paletteColor} className="ui-radio__icon" name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
-    <div className="ui-radio__text">
+    <Icon paletteColor={props.paletteColor} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
+    <Icon paletteColor={props.paletteColor} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
+    <div className="radio__text">
       {props.children}
     </div>
   </label>

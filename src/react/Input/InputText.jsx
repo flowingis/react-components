@@ -7,7 +7,7 @@ const InputText = props =>
   <Input icon={props.icon}>
     <input
       autoComplete={props.autoComplete}
-      className="ui-input__field text-sans text-sans--input"
+      className="input__field text-sans text-sans--input"
       defaultValue={props.value}
       name={props.name}
       onChange={e => props.onChange(e.target.value)}

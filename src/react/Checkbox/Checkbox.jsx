@@ -4,22 +4,22 @@ import './Checkbox.scss'
 import Icon from '../Icon/Icon'
 
 const Checkbox = props =>
-  <label className={`ui-checkbox ${props.className} ${props.icon ? 'ui-checkbox--custom' : ''}`.trim()}>
+  <label className={`checkbox ${props.className} ${props.icon ? 'checkbox--custom' : ''}`.trim()}>
     {!props.sync
-      ? <input onChange={e => props.onChange(e.target.checked)} className="ui-checkbox__field" defaultChecked={props.isChecked} type="checkbox" value="1"/>
-      : <input onChange={e => props.onChange(e.target.checked)} className="ui-checkbox__field" checked={props.isChecked} type="checkbox" value="1"/>
+      ? <input onChange={e => props.onChange(e.target.checked)} className="checkbox__field" defaultChecked={props.isChecked} type="checkbox" value="1"/>
+      : <input onChange={e => props.onChange(e.target.checked)} className="checkbox__field" checked={props.isChecked} type="checkbox" value="1"/>
     }
     {props.icon
       ? <Fragment>
-        <Icon paletteColor={props.paletteColor} className="ui-checkbox__icon" name={props.icon}/>
-        <Icon paletteColor={props.paletteColor} className="ui-checkbox__icon" name={props.icon}/>
+        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name={props.icon}/>
+        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name={props.icon}/>
       </Fragment>
       : <Fragment>
-        <Icon paletteColor={props.paletteColor} className="ui-checkbox__icon" name="formCheckboxUnchecked"/>
-        <Icon paletteColor={props.paletteColor} className="ui-checkbox__icon" name="formCheckboxChecked"/>
+        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name="formCheckboxUnchecked"/>
+        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name="formCheckboxChecked"/>
       </Fragment>
     }
-    <div className="ui-checkbox__text">
+    <div className="checkbox__text">
       {props.children}
     </div>
   </label>
