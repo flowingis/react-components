@@ -8,7 +8,7 @@ import Switch from '../Switch/Switch'
 import Button from '../Button/Button'
 
 const Wrapper = props => {
-  const [show, toggleShow] = useState(true)
+  const [show, toggleShow] = useState(false)
   return (
     <Fragment>
       <Switch isChecked={show} onChange={() => toggleShow(!show)}>
@@ -27,13 +27,5 @@ const Wrapper = props => {
 storiesOf('Actions', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () =>
-    <Actions show={true}>
-      <Button icon="recipe" action="option">Cambia ricetta</Button>
-      <Button icon="reboot" action="option">Riavvia</Button>
-      <Button icon="assignTo" action="option">Assegna a</Button>
-      <Button icon="tag" action="option">Tag</Button>
-    </Actions>
-  )
-  .add('Activation example', () =>
     <Wrapper/>
   )

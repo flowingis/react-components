@@ -6,7 +6,7 @@
     "deploy": "storybook-to-ghpages",
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook --port 51230"
   },
   "husky": {
     "hooks": {
