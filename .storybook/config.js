@@ -1,4 +1,7 @@
 import { addParameters, configure } from '@storybook/react'
+import { themes } from '@storybook/theming';
+
+import theme from './theme';
 
 import '../node_modules/node-normalize-scss/_normalize.scss'
 import '../node_modules/material-design-icons/iconfont/material-icons.css'
@@ -35,7 +38,7 @@ addParameters({
     /**
      * theme storybook, see link below
      */
-    theme: undefined,
+    theme: theme,
   },
 });
 
