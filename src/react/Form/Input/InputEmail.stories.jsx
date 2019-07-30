@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import Page from '../Page/Page'
+import Page from '../../Page/Page'
 
 import InputEmail from './InputEmail'
 import Button from '../Button/Button'

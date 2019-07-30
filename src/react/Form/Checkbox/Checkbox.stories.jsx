@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import Page from '../Page/Page'
+import Page from '../../Page/Page'
 
 import Checkbox from './Checkbox'
 

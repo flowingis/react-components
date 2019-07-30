@@ -1,8 +1,8 @@
-@import '../../scss/import-global';
+@import '../../../scss/import-global';
 
 $opacity: 0.25;
 
-.checkbox {
+.radio {
 
   align-items: end;
   display: inline-flex;
@@ -13,7 +13,7 @@ $opacity: 0.25;
   }
 
   &:hover {
-    .checkbox {
+    .radio {
       &__icon {
         color: get($brand, 'primary');
       }
@@ -23,40 +23,40 @@ $opacity: 0.25;
   &__field {
     display: none;
 
-    & + .checkbox__icon {
+    & + .radio__icon {
       display: inline-block;
     }
 
-    & + .checkbox__icon + .checkbox__icon {
+    & + .radio__icon + .radio__icon {
       display: none;
     }
 
     &:checked {
-      & + .checkbox__icon {
+      & + .radio__icon {
         display: none;
       }
 
-      & + .checkbox__icon + .checkbox__icon {
+      & + .radio__icon + .radio__icon {
         color: get($brand, 'primary');
         display: inline-flex;
       }
     }
   }
 
-  &__text {
-    cursor: pointer;
-  }
-
   &--custom {
-    .checkbox__field {
-      & + .checkbox__icon {
+    .radio__field {
+      & + .radio__icon {
         opacity: $opacity;
       }
 
-      & + .checkbox__icon + .checkbox__icon {
+      & + .radio__icon + .radio__icon {
         opacity: 1;
       }
     }
+  }
+
+  &__text {
+    cursor: pointer;
   }
 
   &__icon {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Filter.scss'
 
 import Filter from './Filter'
-import Radio from '../Radio/Radio'
+import Radio from '../Form/Radio/Radio'
 
 const FilterInstallation = props =>
   <Filter {...props}>

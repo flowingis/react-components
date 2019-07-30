@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Actions.scss'
-import Switch from '../Switch/Switch'
+import Switch from '../Form/Switch/Switch'
 
 const Actions = props => {
   const [expanded, toggleCheckbox] = useState(true)

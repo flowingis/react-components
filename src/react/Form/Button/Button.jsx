@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Button.scss'
-import Icon from '../Icon/Icon'
 import action from './ButtonDictionary'
+import Icon from '../../Inline/Icon/Icon'
 
 const Button = props =>
   <button

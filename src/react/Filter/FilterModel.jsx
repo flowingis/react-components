@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Filter.scss'
 
 import Filter from './Filter'
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Form/Checkbox/Checkbox'
 
 const FilterModel = props =>
   <Filter {...props}>

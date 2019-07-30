@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Page from '../Page/Page'
+import Page from '../../Page/Page'
 
 import Switch from './Switch'
 

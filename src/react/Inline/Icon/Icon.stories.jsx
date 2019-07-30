@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import PropTypes from 'prop-types'
 
 import Icon from './Icon'
-import Page from '../Page/Page'
+import Page from '../../Page/Page'
 import material from './IconDictionary'
 import palette from './IconPalette'
 

@@ -61,7 +61,6 @@
     "postcss-loader": "^3.0.0",
     "sass-lint": "^1.13.1",
     "sass-loader": "^7.1.0",
-    "scss-to-json": "^2.0.0",
     "standard": "^13.0.2",
     "url-search-params-polyfill": "^7.0.0"
   },

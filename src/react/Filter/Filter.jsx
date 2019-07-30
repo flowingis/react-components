@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Filter.scss'
 
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Form/Checkbox/Checkbox'
 
 const Filter = props =>
   <section className={`filter ${props.className} ${props.isActive ? 'filter--active' : ''}`.trim()}>

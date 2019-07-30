@@ -1,0 +1,18 @@
+@import '../../../scss/import-global';
+
+.typographic-infos {
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+
+  @include media ('tablet') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media ('desktop') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media ('large') {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

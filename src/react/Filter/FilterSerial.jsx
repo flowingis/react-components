@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './Filter.scss'
 
 import Filter from './Filter'
-import InputSerial from '../Input/InputSerial'
+import InputSerial from '../Form/Input/InputSerial'
 
 const FilterConnection = props =>
   <Filter {...props}>

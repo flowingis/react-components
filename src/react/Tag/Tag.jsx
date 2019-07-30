@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Tag.scss'
-import Icon from '../Icon/Icon'
+import Icon from '../Inline/Icon/Icon'
 
 const Tag = props =>
   <div className={`tag ${props.className}`}>

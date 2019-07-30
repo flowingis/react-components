@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Modal.scss'
-import Icon from '../Icon/Icon'
-import Button from '../Button/Button'
+import Icon from '../Inline/Icon/Icon'
+import Button from '../Form/Button/Button'
 
 const Modal = props =>
   <div className={`modal ${props.className} ${props.show ? 'modal--active' : ''} ${props.desktopMode ? 'modal--centered' : ''} modal--to-${props.position}`}>

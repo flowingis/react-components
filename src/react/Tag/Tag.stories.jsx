@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
-import palette from '../Icon/IconPalette'
+import palette from '../Inline/Icon/IconPalette'
 import Tag from './Tag'
 
 const dictionary = Object.entries(palette).map(([key, value]) =>

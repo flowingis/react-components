@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
 import Actions from './Actions'
-import Switch from '../Switch/Switch'
-import Button from '../Button/Button'
+import Switch from '../Form/Switch/Switch'
+import Button from '../Form/Button/Button'
 
 const Wrapper = props => {
   const [show, toggleShow] = useState(false)

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import Page from '../Page/Page'
 
 import Modal from '../Modal/Modal'
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Form/Checkbox/Checkbox'
 import FilterInstallation from '../Filter/FilterInstallation'
 import FilterConnection from '../Filter/FilterConnection'
 import FilterModel from '../Filter/FilterModel'
