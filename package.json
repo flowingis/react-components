@@ -5,7 +5,7 @@
   "scripts": {
     "deploy": "storybook-to-ghpages",
     "lint:js": "eslint src/react/**/*.{js,jsx} --fix",
-    "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v",
+    "lint:sass": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v -i 'src/scss/variables/**/*.scss'",
     "storybook": "start-storybook --port 51230",
     "json-sass": "run-for-every-file --src src/scss/data/ --dest src/scss/variables/ --file '**/*.json' --not-file '**/*.scss' --run 'json-to-scss {{src-file}} {{dest}}{{file-name-ext}}'"
   },
