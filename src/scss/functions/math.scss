@@ -1,11 +1,11 @@
-$spacing: 20px !default;
+$gutter: 20px !default;
 
 @function scale-value($value, $scale) {
   @return round($value * $scale);
 }
 
 @function spacing($scale: 1) {
-  @return scale-value($spacing, $scale);
+  @return scale-value($gutter, $scale);
 }
 
 @function s($scale: 1, $value: null) {

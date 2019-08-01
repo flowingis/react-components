@@ -11,6 +11,7 @@ export default {
   dashboard: 'insert_chart',
   disable: 'block',
   disconnected: 'settings_ethernet',
+  dot: 'fiber_manual_record',
   download: 'archive',
   edit: 'create',
   email: 'email',

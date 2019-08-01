@@ -1,8 +1,8 @@
-@import '../../../scss/import-global';
+@import '../../../scss/import';
 
 $outline: 0 0 0 4px rgba(get($brand, 'primary'), 0.075);
 $outline-error: 0 0 0 4px rgba(get($status, 'error'), 0.075);
-$size: get($form, 'height');
+$size: get($form, 'input-height');
 
 .input {
   display: block;

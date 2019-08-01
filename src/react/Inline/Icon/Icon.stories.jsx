@@ -37,7 +37,7 @@ const paletteDictionary = Object.entries(palette).map(([key, value]) =>
   <ExampleIconColor key={key} paletteColor={key} name="warning"/>
 )
 
-storiesOf('Icon', module)
+storiesOf('Inline/Icon', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () => <Icon name='sendToMachine'/>)
   .add('Small', () => <Icon name='sendToMachine' size='small'/>)

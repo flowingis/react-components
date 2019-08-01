@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Typography.scss'
 
 const Typography = props => {
   const HtmlTag = props.htmlTag.toLowerCase()
