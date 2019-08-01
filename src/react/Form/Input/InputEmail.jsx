@@ -8,6 +8,7 @@ const InputEmail = props =>
       autoComplete={props.autoComplete}
       className="input__field text-sans text-sans--input"
       defaultValue={props.value}
+      iconClassName={props.iconClassName}
       name={props.name}
       onBlur={e => { console.log(e) }}
       placeholder={props.placeholder}
@@ -18,6 +19,7 @@ const InputEmail = props =>
 InputEmail.propTypes = {
   autoComplete: PropTypes.string,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
   isValid: PropTypes.bool,
@@ -28,6 +30,7 @@ InputEmail.propTypes = {
 InputEmail.defaultProps = {
   autoComplete: 'off',
   icon: 'email',
+  iconClassName: '',
   name: 'email',
   placeholder: 'your@email.com',
   isValid: false,

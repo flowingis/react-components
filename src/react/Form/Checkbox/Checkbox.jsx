@@ -11,12 +11,12 @@ const Checkbox = props =>
     }
     {props.icon
       ? <Fragment>
-        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name={props.icon}/>
-        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name={props.icon}/>
+        <Icon className={`checkbox__icon ${props.iconClassName}`} name={props.icon}/>
+        <Icon className={`checkbox__icon ${props.iconClassName}`} name={props.icon}/>
       </Fragment>
       : <Fragment>
-        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name="formCheckboxUnchecked"/>
-        <Icon paletteColor={props.paletteColor} className="checkbox__icon" name="formCheckboxChecked"/>
+        <Icon className={`checkbox__icon ${props.iconClassName}`} name="formCheckboxUnchecked"/>
+        <Icon className={`checkbox__icon ${props.iconClassName}`} name="formCheckboxChecked"/>
       </Fragment>
     }
     <div className="checkbox__text">
@@ -27,18 +27,18 @@ const Checkbox = props =>
 Checkbox.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   isChecked: PropTypes.bool,
   onChange: PropTypes.func,
-  paletteColor: PropTypes.string,
   sync: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
   className: '',
   icon: '',
+  iconClassName: '',
   isChecked: false,
   onChange: value => { return value },
-  paletteColor: '',
   sync: false,
 }
 

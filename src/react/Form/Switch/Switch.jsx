@@ -12,7 +12,7 @@ const Switch = props =>
       type="checkbox"
       defaultValue={props.value}
     />
-    <div className="switch__box">
+    <div className={`switch__box ${props.boxClassName}`}>
       <div className="switch__dot"></div>
     </div>
     <div className="switch__text">
@@ -22,6 +22,7 @@ const Switch = props =>
 
 Switch.propTypes = {
   className: PropTypes.string,
+  boxClassName: PropTypes.string,
   isChecked: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -30,6 +31,7 @@ Switch.propTypes = {
 
 Switch.defaultProps = {
   className: '',
+  boxClassName: '',
   isChecked: false,
   name: 'unassigned',
   onChange: value => { return value },

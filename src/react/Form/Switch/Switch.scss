@@ -12,7 +12,7 @@ $dot: (
 
 $box: (
   'checked': get($brand, 'primary'),
-  'hover': get($tone, 'dust'),
+  'hover': get($tone, 'abbey'),
   'radius': 100px,
   'unchecked': get($tone, 'dust'),
 );
@@ -28,7 +28,7 @@ $box: (
     &:checked {
       & + .switch__box {
         background-color: get($box, 'checked');
-
+        filter: grayscale(0);
         // sass-lint:disable nesting-depth
         .switch__dot {
           background-color: get($dot, 'checked');
@@ -42,10 +42,11 @@ $box: (
     background-color: get($box, 'unchecked');
     border-radius: get($box, 'radius');
     cursor: pointer;
+    filter: grayscale(1);
     flex-shrink: 0;
     line-height: 0;
     padding: $padding-size;
-    transition: background-color get($tween, 'hover');
+    transition: background-color get($tween, 'hover'), filter get($tween, 'hover');
     width: (($dot-size + $padding-size) * 2);
 
     &:hover {

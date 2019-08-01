@@ -1,6 +1,8 @@
 @import '../../../scss/import';
 
 $opacity: 0.25;
+$default: get($tone, 'dust');
+$checked: get($tone, 'abbey');
 
 .radio {
 
@@ -15,7 +17,8 @@ $opacity: 0.25;
   &:hover {
     .radio {
       &__icon {
-        color: get($brand, 'primary');
+        color: $checked;
+        filter: grayscale(0);
       }
     }
   }
@@ -37,8 +40,9 @@ $opacity: 0.25;
       }
 
       & + .radio__icon + .radio__icon {
-        color: get($brand, 'primary');
+        color: $checked;
         display: inline-flex;
+        filter: grayscale(0);
       }
     }
   }
@@ -50,6 +54,7 @@ $opacity: 0.25;
       }
 
       & + .radio__icon + .radio__icon {
+        filter: grayscale(0);
         opacity: 1;
       }
     }
@@ -60,10 +65,11 @@ $opacity: 0.25;
   }
 
   &__icon {
-    color: get($brand, 'primary');
+    color: $default;
     cursor: pointer;
+    filter: grayscale(1);
     margin-right: s(0.25);
-    transition: color get($tween, 'hover');
+    transition: color get($tween, 'hover'), filter get($tween, 'hover');
     user-select: none;
   }
 }

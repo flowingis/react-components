@@ -12,7 +12,7 @@ const Input = props =>
     }
     {props.icon &&
       <div className="input__icon-area">
-        <Icon className="input__icon" name={props.icon}/>
+        <Icon className={`input__icon ${props.iconClassName}`} name={props.icon}/>
       </div>
     }
     {props.children}
@@ -30,6 +30,7 @@ Input.propTypes = {
   className: PropTypes.string,
   errors: PropTypes.obj,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   label: PropTypes.string,
 }
 
@@ -37,6 +38,7 @@ Input.defaultProps = {
   className: '',
   errors: {},
   icon: '',
+  iconClassName: '',
   label: '',
 }
 

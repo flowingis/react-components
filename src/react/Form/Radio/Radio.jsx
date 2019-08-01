@@ -13,8 +13,8 @@ const Radio = props =>
       type="radio"
       value={props.value}
     />
-    <Icon paletteColor={props.paletteColor} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
-    <Icon paletteColor={props.paletteColor} className="radio__icon" name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
+    <Icon className={`radio__icon ${props.iconClassName}`} name={`${props.icon ? props.icon : 'formRadioUnchecked'}`}/>
+    <Icon className={`radio__icon ${props.iconClassName}`} name={`${props.icon ? props.icon : 'formRadioChecked'}`}/>
     <div className="radio__text">
       {props.children}
     </div>
@@ -23,6 +23,7 @@ const Radio = props =>
 Radio.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   isChecked: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -33,6 +34,7 @@ Radio.propTypes = {
 Radio.defaultProps = {
   className: '',
   icon: '',
+  iconClassName: '',
   isChecked: false,
   name: 'unassigned',
   onChange: value => { return value },

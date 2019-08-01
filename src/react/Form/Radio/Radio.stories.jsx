@@ -50,10 +50,10 @@ storiesOf('Form/Radio', module)
   .add('Custom color', () =>
     <Fragment>
       <div>Show:</div>
-      <Radio isChecked={true} value={42} icon="error" paletteColor="red2">
+      <Radio isChecked={true} value={42} icon="error" iconClassName="color-red-2">
         Errors
       </Radio>
-      <Radio value={107} icon="warning" paletteColor="yellow1">
+      <Radio value={107} icon="warning" iconClassName="color-yellow-1">
         Warnings
       </Radio>
     </Fragment>

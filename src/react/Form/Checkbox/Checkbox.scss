@@ -1,6 +1,8 @@
 @import '../../../scss/import';
 
 $opacity: 0.25;
+$default: get($tone, 'dust');
+$checked: get($tone, 'abbey');
 
 .checkbox {
 
@@ -15,7 +17,8 @@ $opacity: 0.25;
   &:hover {
     .checkbox {
       &__icon {
-        color: get($brand, 'primary');
+        color: $checked;
+        filter: grayscale(0);
       }
     }
   }
@@ -37,8 +40,9 @@ $opacity: 0.25;
       }
 
       & + .checkbox__icon + .checkbox__icon {
-        color: get($brand, 'primary');
+        color: $checked;
         display: inline-flex;
+        filter: grayscale(0);
       }
     }
   }
@@ -54,16 +58,18 @@ $opacity: 0.25;
       }
 
       & + .checkbox__icon + .checkbox__icon {
+        filter: grayscale(0);
         opacity: 1;
       }
     }
   }
 
   &__icon {
-    color: get($brand, 'primary');
+    color: $default;
     cursor: pointer;
+    filter: grayscale(1);
     margin-right: s(0.25);
-    transition: color get($tween, 'hover');
+    transition: color get($tween, 'hover'), filter get($tween, 'hover');
     user-select: none;
   }
 }

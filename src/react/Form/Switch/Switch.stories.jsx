@@ -12,3 +12,8 @@ storiesOf('Form/Switch', module)
   .add('Active by default', () =>
     <Switch isChecked={true}>I'm am checked by default</Switch>
   )
+  .add('Custom color', () =>
+    <Switch boxClassName="background-color-red-2">
+      Custom color <code>background-color-red-2</code>
+    </Switch>
+  )

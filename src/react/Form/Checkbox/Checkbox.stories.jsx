@@ -32,8 +32,8 @@ storiesOf('Form/Checkbox', module)
     </Checkbox>
   )
   .add('Custom color', () =>
-    <Checkbox paletteColor="red2">
-      Custom color (red2)
+    <Checkbox iconClassName="color-red-2">
+      Custom color <code>color-red-2</code>
     </Checkbox>
   )
   .add('Sync', () =>

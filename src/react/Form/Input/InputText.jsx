@@ -9,6 +9,7 @@ const InputText = props =>
       autoComplete={props.autoComplete}
       className="input__field text-sans text-sans--input"
       defaultValue={props.value}
+      iconClassName={props.iconClassName}
       name={props.name}
       onChange={e => props.onChange(e.target.value)}
       placeholder={props.placeholder}
@@ -19,6 +20,7 @@ const InputText = props =>
 InputText.propTypes = {
   autoComplete: PropTypes.string,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
@@ -28,6 +30,7 @@ InputText.propTypes = {
 InputText.defaultProps = {
   autoComplete: 'off',
   icon: '',
+  iconClassName: '',
   name: 'unassigned',
   onChange: value => { return value },
   placeholder: '',

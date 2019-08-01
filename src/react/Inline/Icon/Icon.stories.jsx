@@ -25,7 +25,7 @@ const ExampleIconColor = props =>
       <div>
         <Icon className={`color-${props.tint}-${tone}`}/>
       </div>
-      <code>.color-{props.tint}-{tone}</code>
+      <code>color-{props.tint}-{tone}</code>
     </div>
   )
 

@@ -1,6 +1,7 @@
 @mixin add-palette-selector($property, $tint-name, $tint-color, $tone-name, $tone-color) {
   .#{$property}-#{$tint-name}-#{$tone-name} {
-    #{$property}: sh($tone-color, $tint-color);
+    // sass-lint:disable no-important
+    #{$property}: sh($tone-color, $tint-color) !important;
   }
 }
 
