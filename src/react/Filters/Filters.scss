@@ -1,7 +1,7 @@
 @import '../../scss/import';
 
 .filters {
-  background-color: get($grey-scale, 'haze');
+  background-color: get($tone, 'haze');
   padding: s(1);
   position: sticky;
 

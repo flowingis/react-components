@@ -9,7 +9,7 @@
 
     &__props {
       $tint: #000;
-      background-color: sh(get($grey-scale, 'haze'), $tint);
+      background-color: sh(get($tone, 'haze'), $tint);
       opacity: 1;
     }
   }
@@ -40,7 +40,7 @@
 
   &__header {
     align-items: center;
-    border-bottom: 2px solid get($grey-scale, 'boulder');
+    border-bottom: 2px solid get($tone, 'boulder');
     display: flex;
     margin-bottom: s(0.25);
     padding-bottom: s(0.25);

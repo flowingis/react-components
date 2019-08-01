@@ -8,7 +8,7 @@ $small-height: 26px;
   background-color: get($brand, 'primary');
   border: 1px solid get($brand, 'primary');
   border-radius: get($radius, 'normal');
-  color: get($grey-scale, 'white');
+  color: get($tone, 'white');
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -46,8 +46,8 @@ $small-height: 26px;
 
   &--cancel {
     background-color: transparent;
-    border-color: get($grey-scale, 'abbey');
-    color: get($grey-scale, 'abbey');
+    border-color: get($tone, 'abbey');
+    color: get($tone, 'abbey');
   }
 
   &--warning {
@@ -79,8 +79,8 @@ $small-height: 26px;
   }
 
   &--option {
-    background-color: get($grey-scale, 'abbey');
-    border-color: get($grey-scale, 'abbey');
+    background-color: get($tone, 'abbey');
+    border-color: get($tone, 'abbey');
 
     &:focus,
     &:hover {

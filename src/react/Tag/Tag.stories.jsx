@@ -1,20 +1,32 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import PropTypes from 'prop-types'
 import Page from '../Page/Page'
-
-import palette from '../Inline/Icon/IconPalette'
 import Tag from './Tag'
 
-const dictionary = Object.entries(palette).map(([key, value]) =>
-  <Tag key={key} paletteColor={key}>{key}{key === 'inherit' && ' (default)'}</Tag>
+import colors from '../../scss/data/colors.json'
+
+const ExampleTagColor = props =>
+  Object.entries(colors.palette.tones).map(([tone, toneValue]) =>
+    <Tag iconClassName={`color-${props.tint}-${tone}`}>
+      <code>color-{props.tint}-{tone}</code>
+    </Tag>
+  )
+
+ExampleTagColor.propTypes = {
+  tint: PropTypes.string,
+}
+
+const paletteDictionary = Object.entries(colors.palette.colors).map(([tintName, tintValue]) =>
+  <ExampleTagColor tint={tintName}/>
 )
 
 storiesOf('Tag', module)
   .addDecorator(story => <Page>{story()}</Page>)
   .add('Default', () => <Tag>Tag name</Tag>)
-  .add('Color', () => <Tag paletteColor='yellow3'>Coffee</Tag>)
+  .add('Color', () => <Tag iconClassName='color-orange-1'>Coffee</Tag>)
   .add('Palette dictionary', () =>
     <div className='grid' style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-      {dictionary}
+      {paletteDictionary}
     </div>
   )

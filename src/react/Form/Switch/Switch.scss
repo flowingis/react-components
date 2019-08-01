@@ -4,17 +4,17 @@ $dot-size: s(1);
 $padding-size: s(0.25);
 
 $dot: (
-  'checked': get($grey-scale, 'white'),
-  'hover': get($grey-scale, 'white'),
+  'checked': get($tone, 'white'),
+  'hover': get($tone, 'white'),
   'radius': 100px,
-  'unchecked': get($grey-scale, 'haze'),
+  'unchecked': get($tone, 'haze'),
 );
 
 $box: (
   'checked': get($brand, 'primary'),
-  'hover': get($grey-scale, 'star-dust'),
+  'hover': get($tone, 'dust'),
   'radius': 100px,
-  'unchecked': get($grey-scale, 'star-dust'),
+  'unchecked': get($tone, 'dust'),
 );
 
 .switch {
@@ -65,7 +65,7 @@ $box: (
     display: inline-block;
     height: $dot-size;
     line-height: 0;
-    transition: background-color get($tween, 'hover'), transform get($tween, 'move');
+    transition: background-color get($tween, 'hover'), transform get($tween, 'slide');
     width: $dot-size;
   }
 

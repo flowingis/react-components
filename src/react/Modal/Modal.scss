@@ -1,7 +1,7 @@
 @import '../../scss/import';
 
 $modal-size: 450px;
-$modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
+$modal-background: rgba(get($tone, 'abbey'), 0.5);
 
 .modal {
   align-items: center;
@@ -13,7 +13,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
   position: fixed;
   right: 0;
   top: 0;
-  transition: visibility get($tween, 'slow');
+  transition: visibility get($tween, 'slide');
   visibility: hidden;
   z-index: 1;
 
@@ -42,7 +42,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
     position: absolute;
     right: 0;
     top: 0;
-    transition: opacity get($tween, 'slow');
+    transition: opacity get($tween, 'slide');
   }
 
   &--centered {
@@ -109,7 +109,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
   }
 
   &__window {
-    background-color: get($grey-scale, 'white');
+    background-color: get($tone, 'white');
     box-shadow: none;
     display: flex;
     flex-direction: column;
@@ -119,7 +119,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
     opacity: 1;
     position: relative;
     transform: translate(calc(100% + #{s(3)}), 0);
-    transition: box-shadow get($tween, 'slow'), opacity get($tween, 'slow'), transform get($tween, 'slow');
+    transition: box-shadow get($tween, 'slide'), opacity get($tween, 'slide'), transform get($tween, 'slide');
     z-index: 1;
 
     @include media ('tablet') {
@@ -129,7 +129,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
   }
 
   &__header {
-    background-color: get($grey-scale, 'white');
+    background-color: get($tone, 'white');
     box-shadow: get($shadow, 'bottom');
     display: flex;
     flex-shrink: 0;
@@ -142,7 +142,7 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
   }
 
   &__footer {
-    background-color: get($grey-scale, 'white');
+    background-color: get($tone, 'white');
     box-shadow: get($shadow, 'top');
     display: grid;
     grid-gap: s(1);
@@ -198,14 +198,14 @@ $modal-background: rgba(get($grey-scale, 'abbey'), 0.5);
   }
 
   &__close {
-    color: get($grey-scale, 'white');
+    color: get($tone, 'white');
     cursor: pointer;
     left: s(1);
     opacity: 0;
     position: fixed;
     top: s(1);
     transform: translate(-100%, 0);
-    transition: opacity get($tween, 'slow'), transform get($tween, 'slow');
+    transition: opacity get($tween, 'slide'), transform get($tween, 'slide');
     z-index: 2;
 
     @include media ('tablet') {

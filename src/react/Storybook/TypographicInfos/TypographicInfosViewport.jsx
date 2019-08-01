@@ -16,7 +16,7 @@ const TypographicInfosViewport = props =>
   <div className={`typographic-infos-viewport typographic-infos-viewport--${props.viewportName}`}>
     <header className="typographic-infos-viewport__header">
       <b className="typographic-infos-viewport__name">{props.viewportName}</b>
-      <Icon className="typographic-infos-viewport__icon" name="dot" paletteColor="green1"/>
+      <Icon className="typographic-infos-viewport__icon color-green-3" name="dot"/>
     </header>
     {props.viewportRule
       ? <div>Rule: <code>{props.viewportRule}</code></div>

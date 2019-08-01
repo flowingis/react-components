@@ -2,8 +2,8 @@
 
 .filter {
 
-  background-color: get($grey-scale, 'haze');
-  border-bottom: 2px solid mix(get($grey-scale, 'mercury'), get($grey-scale, 'haze'));
+  background-color: get($tone, 'haze');
+  border-bottom: 2px solid mix(get($tone, 'mercury'), get($tone, 'haze'));
   padding: s(1);
   transition: background-color get($tween, 'hover');
 

@@ -2,8 +2,8 @@ body {
   // sass-lint:disable no-vendor-prefixes
   -webkit-tap-highlight-color: transparent;
   @include apply-styles-set($font-sans-styles, 'paragraph');
-  background-color: get($grey-scale, 'white');
-  color: get($grey-scale, 'abbey');
+  background-color: get($tone, 'white');
+  color: get($tone, 'abbey');
   font-family: get($font-family, 'sans');
   width: 100%;
 }
@@ -62,7 +62,7 @@ h6 {
 
 hr {
   $size: 4px;
-  background-color: get($grey-scale, 'mercury');
+  background-color: get($tone, 'mercury');
   border: 0;
   border-radius: $size;
   height: $size;
@@ -78,8 +78,8 @@ hr {
 
 code {
   $tint: #000;
-  background-color: sh(get($grey-scale, 'haze'), $tint);
+  background-color: sh(get($tone, 'haze'), $tint);
   border-radius: get($radius, 'small');
-  color: sh(get($grey-scale, 'boulder'), $tint);
+  color: sh(get($tone, 'boulder'), $tint);
   padding: s(0.125) s(0.25);
 }

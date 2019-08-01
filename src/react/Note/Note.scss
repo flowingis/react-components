@@ -9,7 +9,7 @@ $angle-size: s(1);
   // @include apply-styles-set($font-sans-styles, 'note');
   background-color: $note-color;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: mix(get($grey-scale, 'black'), $note-color);
+  color: mix(get($tone, 'black'), $note-color);
   padding: s(0.5) s(1);
   position: relative;
 

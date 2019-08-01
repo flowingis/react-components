@@ -5,7 +5,7 @@ import Icon from '../Inline/Icon/Icon'
 
 const Tag = props =>
   <div className={`tag ${props.className}`}>
-    <Icon paletteColor={props.paletteColor} name={props.icon} className="tag__icon"/>
+    <Icon paletteColor={props.paletteColor} name={props.icon} className={`tag__icon ${props.iconClassName}`}/>
     <div className="tag__text">
       {props.children}
     </div>
@@ -14,12 +14,14 @@ const Tag = props =>
 Tag.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
+  iconClassName: PropTypes.string,
   paletteColor: PropTypes.string,
 }
 
 Tag.defaultProps = {
   className: '',
   icon: 'tag',
+  iconClassName: '',
   paletteColor: 'inherit',
 }
 

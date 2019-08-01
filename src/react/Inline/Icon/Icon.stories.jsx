@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import Icon from './Icon'
 import Page from '../../Page/Page'
 import material from './IconDictionary'
-import palette from './IconPalette'
+
+import colors from '../../../scss/data/colors.json'
 
 const ExampleIcon = props => <div style={{ textAlign: 'center' }}>
   <div>
@@ -14,27 +15,30 @@ const ExampleIcon = props => <div style={{ textAlign: 'center' }}>
   <code>{props.name}</code>
 </div>
 
-const ExampleIconColor = props => <div style={{ textAlign: 'center' }}>
-  <div>
-    <Icon {...props} />
-  </div>
-  <code>{(props.paletteColor === 'inherit' ? props.paletteColor + ' (default)' : props.paletteColor)}</code>
-</div>
-
-ExampleIconColor.propTypes = {
-  paletteColor: PropTypes.string,
-}
-
 ExampleIcon.propTypes = {
   name: PropTypes.string.isRequired,
 }
 
-const iconDictionary = Object.entries(material).map(([key, value]) =>
-  <ExampleIcon key={key} name={key}/>
+const ExampleIconColor = props =>
+  Object.entries(colors.palette.tones).map(([tone, toneValue]) =>
+    <div style={{ textAlign: 'center' }}>
+      <div>
+        <Icon className={`color-${props.tint}-${tone}`}/>
+      </div>
+      <code>.color-{props.tint}-{tone}</code>
+    </div>
+  )
+
+ExampleIconColor.propTypes = {
+  tint: PropTypes.string,
+}
+
+const paletteDictionary = Object.entries(colors.palette.colors).map(([tintName, tintValue]) =>
+  <ExampleIconColor tint={tintName}/>
 )
 
-const paletteDictionary = Object.entries(palette).map(([key, value]) =>
-  <ExampleIconColor key={key} paletteColor={key} name="warning"/>
+const iconDictionary = Object.entries(material).map(([key, value]) =>
+  <ExampleIcon key={key} name={key}/>
 )
 
 storiesOf('Inline/Icon', module)

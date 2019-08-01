@@ -11,11 +11,14 @@ $gutter: get($sizes, 'gutter');
 $form: get($sizes, 'form');
 
 $brand: get($colors, 'brand');
-$grey-scale: get($colors, 'grey-scale');
+$tone: get($colors, 'tone');
 $status: get($colors, 'status');
+$palette-tints: get(get($colors, 'palette'), 'colors');
+$palette-tones: get(get($colors, 'palette'), 'tones');
 $radius: get($cosmetics, 'radius');
 $shadow: get($cosmetics, 'shadow');
 $tween: get($cosmetics, 'tween');
+
 
 $font-family: (
   'sans': #{get(get($font-families, 'sans'), 'family')}

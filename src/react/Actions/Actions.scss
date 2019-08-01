@@ -3,15 +3,15 @@
 $footer-height: -54px;
 
 .actions {
-  background-color: get($grey-scale, 'boulder');
+  background-color: get($tone, 'boulder');
   bottom: 0;
-  color: get($grey-scale, 'white');
+  color: get($tone, 'white');
   left: 0;
   padding: s(1);
   position: fixed;
   right: 0;
   transform: translate(0, 100%);
-  transition: transform get($tween, 'slow');
+  transition: transform get($tween, 'slide');
 
   &--active {
     transform: translate(0, $footer-height);
@@ -68,7 +68,7 @@ $footer-height: -54px;
     transition: margin-bottom get($tween, 'hover');
 
     @include media ('tablet') {
-      border-bottom: 2px solid get($grey-scale, 'mercury');
+      border-bottom: 2px solid get($tone, 'mercury');
       padding-bottom: s(0.75);
     }
   }
