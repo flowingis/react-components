@@ -21,9 +21,9 @@ ExampleIcon.propTypes = {
 
 const ExampleIconColor = props =>
   Object.entries(colors.palette.tones).map(([tone, toneValue]) =>
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'center', marginBottom: '15px' }}>
       <div>
-        <Icon className={`color-${props.tint}-${tone}`}/>
+        <Icon name="warning" className={`color-${props.tint}-${tone}`}/>
       </div>
       <code>color-{props.tint}-{tone}</code>
     </div>
@@ -34,7 +34,9 @@ ExampleIconColor.propTypes = {
 }
 
 const paletteDictionary = Object.entries(colors.palette.colors).map(([tintName, tintValue]) =>
-  <ExampleIconColor tint={tintName}/>
+  <span style={{ display: 'inline-flex', alignItems: 'center', flexDirection: 'column' }}>
+    <ExampleIconColor tint={tintName}/>
+  </span>
 )
 
 const iconDictionary = Object.entries(material).map(([key, value]) =>
