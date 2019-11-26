@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 
 import Icon from './Icon'
 import Page from '../../Page/Page'
-import material from './IconDictionary'
+import material from './dictionary.json'
 
 import colors from '../../../scss/data/colors.json'
 
-const ExampleIcon = props => <div style={{ textAlign: 'center' }}>
+const ExampleIcon = props => <div className="flex-row">
   <div>
     <Icon {...props} />
   </div>
@@ -49,7 +49,7 @@ storiesOf('Inline/Icon', module)
   .add('Small', () => <Icon name='sendToMachine' size='small'/>)
   .add('Missing icon', () => <Icon name='expired'/>)
   .add('Icon dictionary', () =>
-    <div className='grid' style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+    <div>
       {iconDictionary}
     </div>
   )

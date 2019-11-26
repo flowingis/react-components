@@ -56,6 +56,11 @@ storiesOf('Modal', module)
       {description}<br/><br/>{description}<br/><br/>{description}
     </Modal>
   )
+  .add('Left position', () =>
+    <Modal position="left">
+      {description}<br/><br/>{description}<br/><br/>{description}
+    </Modal>
+  )
   .add('Clean', () =>
     <Modal show={true} contentOnly={true}>
       {description}<br/><br/>{description}<br/><br/>{description}

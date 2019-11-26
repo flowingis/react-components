@@ -30,6 +30,15 @@ $modal-background: rgba(get($tone, 'abbey'), 0.5);
         left: auto;
         right: s(1);
       }
+
+      &__window {
+        // transform: translate(calc(-100% + #{s(3)}), 0);
+        transform: translate(-100%, 0);
+
+        @include media ('tablet') {
+          transform: translate(-100%, 0);
+        }
+      }
     }
   }
 

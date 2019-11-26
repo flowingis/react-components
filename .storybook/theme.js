@@ -33,5 +33,5 @@ export default create({
 
   brandTitle: 'Flowing storybook',
   brandUrl: 'https://www.flowing.it',
-  brandImage: '//www.flowing.it/static/media/logo-flowing_white.b141c072.svg',
+  brandImage: '//raw.githubusercontent.com/vitto/vue-components/master/src/assets/logo-flowing-react.png',
 })
