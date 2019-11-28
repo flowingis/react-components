@@ -1,0 +1,29 @@
+@import '../../../scss/import';
+
+$height: 40px;
+
+.nav-bar {
+  align-items: center;
+  background-color: get($tone, 'black');
+  color: get($tone, 'white');
+  display: flex;
+  height: $height;
+
+  &__actions {
+    margin-left: s(0.5);
+  }
+
+  &__logo {
+    background-image: url('./assets/logo-flowing-white.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-grow: 1;
+    height: $height - s(1);
+    margin: 0 s(0.5);
+  }
+
+  &__options {
+    margin-right: s(0.5);
+  }
+}
