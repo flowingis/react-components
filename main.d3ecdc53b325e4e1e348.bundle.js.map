@@ -1,0 +1,1 @@
+{"version":3,"file":"main.d3ecdc53b325e4e1e348.bundle.js","sources":["webpack:///./src/react/Form/Button/ButtonDictionary.js"],"sourcesContent":["export default {\n  cancel: 'button--cancel',\n  confirm: 'button--confirm',\n  danger: 'button--danger',\n  default: '',\n  option: 'button--option',\n  warning: 'button--warning',\n}\n"],"mappings":"AAAA","sourceRoot":""}
