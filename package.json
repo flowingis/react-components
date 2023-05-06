@@ -36,7 +36,7 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/cli": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/react": "^7.0.9",
     "@storybook/storybook-deployer": "^2.8.1",
     "@symfony/webpack-encore": "^0.27.0",
     "autoprefixer": "^9.6.1",
